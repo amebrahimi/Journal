@@ -36,14 +36,14 @@ MySQL organizes its information into databases; each on can hold tables with spe
 You can quickly check what databases are available by typing:</br>
 `SHOW DATABASES;`</br>
 Screen should look like this:</br>
-` mysql> SHOW DATABASES;
- +--------------------+
- | Database           |
- +--------------------+
- | information_schema |
- | mysql              |
- | performance_schema |
- | test               |
- +--------------------+
+` mysql> SHOW DATABASES;</br>
+ +--------------------+</br>
+ | Database           |</br>
+ +--------------------+</br>
+ | information_schema |</br>
+ | mysql              |</br>
+ | performance_schema |</br>
+ | test               |</br>
+ +--------------------+</br>
  4 rows in set (0.01 sec)`
 

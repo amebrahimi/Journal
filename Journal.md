@@ -1,4 +1,5 @@
 #My Journal
+##How to share folders in windows with ubuntu using vmware
 Tuseday, 28 FEB, 2017
 i wanted to share some folders with my ubuntu in VMware Workstation and found this [site](http://theholmesoffice.com/how-to-share-folders-between-windows-and-ubuntu-using-vmware-player/) with googling "how to mount a folder in vmware linux" and there was the solution:</br>
 1. Power down the machine (shut down ubuntu)</br>
@@ -14,3 +15,4 @@ this will be used more often
 9. To check to see if Ubuntu is aware of the folder use `vmware-hgfsclient`</br>
 10. now enter `sudo vmware-config-tools.pl` follow the prompts, aceepting the default values</br>
 11. check to see if that folder is now showing in /mnt/hgfs directory.</br>
+**************************************************************************

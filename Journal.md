@@ -35,3 +35,15 @@ Two points to keep in mind:</br>
 MySQL organizes its information into databases; each on can hold tables with specific data.</br>
 You can quickly check what databases are available by typing:</br>
 `SHOW DATABASES;`</br>
+Screen should look like this:</br>
+` mysql> SHOW DATABASES;
+ +--------------------+
+ | Database           |
+ +--------------------+
+ | information_schema |
+ | mysql              |
+ | performance_schema |
+ | test               |
+ +--------------------+
+ 4 rows in set (0.01 sec)`
+

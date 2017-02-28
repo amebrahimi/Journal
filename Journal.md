@@ -74,3 +74,30 @@ the first step is to create a new table within the larger database.</br>
 </br>
 Let's open the database we want to use:</br>
 `USE events;`
+in the same way that you could check the available databases, you can also see an overview of the tables that the database contains.</br>
+`SHOW tables;`
+Since this is a new database, MySQL has nothing to show, and you will get a message that says, "Empty set"</br>
+
+### How to Create a My SQL Table
+
+Let's imagine that we are planning a get together of friends. We can use MySQL to track the details of the even.</br>
+</br>
+Let's create a new MySQL table:
+```
+CREATE TABLE potluck (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(20),
+food VARCHAR(30),
+confirmed CHAR(1),
+signup_date DATE);
+```
+<dl>
+<dt>This command accomplishes a number of things:</dt>
+<dd>1. It has created a table called potluck within the directory, events.</dd>
+<dd>2. We have set up 5 columns in the table--id, name, food, confirmed, and signup data.</dd>
+<dd>3. The "id" column has a command (INT NOT NULL PRIMARY KEY AUTO_INCREMENT) that automatically numbers each row.</dd>
+<dd>4. The "name" column has been limited by VARCHAR command to be under 20 characters long.</dd>
+<dd>5. The "food" column designates the food each person will bring. The VARCHAR limits text to be under 30 characters.</dd>
+<dd>6. The "confirmed" column redords whether the person has RSVP'd with one letter, Y or N.</dd>
+<dd>7. The "date" column will show when they signed up for the events. MySQL requires that dates be written as yyyy-mm-dd
+</dl>
+

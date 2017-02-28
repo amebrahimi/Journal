@@ -16,6 +16,11 @@ this will be used more often
 10. now enter `sudo vmware-config-tools.pl` follow the prompts, aceepting the default values</br>
 11. check to see if that folder is now showing in /mnt/hgfs directory.</br>
 
-***
+******
 ##How to setup my-sql on ubuntu
-i wanted to
+i want to setup my-sql on the `tuttifruitti.adad.ws` server to push all my local works to the server. i have searched the google for **digitalocean mysql** and end up with this [site](https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial) and here is how its done:</br>
+###How to install my-sql on ubuntu
+`sudo apt-get install mysql-server`
+###How to Access the MySQL shell
+Once you have MySQL installed on your droplet, you can access the MySQL shell by typing `mysql -u root -p`</br>
+

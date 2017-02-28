@@ -48,4 +48,29 @@ Screen should look like this:</br>
  +--------------------+
  4 rows in set (0.01 sec)
 ```
+Creating database is very easy:</br>
+`CREATE DATABASE database name;`
+In this case, for example, we will cal our database "events."</br>
+```
+  mysql> SHOW DATABASES;
+ +--------------------+
+ | Database           |
+ +--------------------+
+ | information_schema |
+ | events             |
+ | mysql              |
+ | performance_schema |
+ | test               |
+ +--------------------+
+ 5 rows in set (0.00 sec)
+```
+In MySQL, the phrase most often used to delete objects is Drop. You would delete a MySQL database with this command:</br>
+`DROP DATABASE database name;`
 
+###How to Access a MySQL Database
+Once we have a new database, we can begin to fill it with information.</br>
+</br>
+the first step is to create a new table within the larger database.</br>
+</br>
+Let's open the database we want to use:</br>
+`USE events;`

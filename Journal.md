@@ -134,3 +134,13 @@ Use this format to insert information into each row:</br>
 ```
 INSER INTO `potluck` (`id`, `name`, `food`,`confirmed`,`signup_date`) VALUES (NULL, "john", "Casserole", "Y", '2012-04-11');
 ```
+Once you input that in you will see the words:</br>
+```
+Query OK, 1 row affected (0.00 sec)
+```
+Let's add a couple more people to our group:</br>
+```
+INSERT INTO `potluck` (`id`,`name`,`food`,`confirmed`,`signup_date`) VALUES (NULL, "Sandy", "Key Lime Tarts","N", '2012-04-14');
+INSERT INTO `potluck` (`id`,`name`,`food`,`confirmed`,`signup_date`) VALUES (NULL, "Tom", "BBQ","Y", '2012-04-18');
+INSERT INTO `potluck` (`id`,`name`,`food`,`confirmed`,`signup_date`) VALUES (NULL, "Tina", "Salad","Y", '2012-04-10'); 
+```

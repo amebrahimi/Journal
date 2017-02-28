@@ -111,7 +111,7 @@ Let's take a look at how the table appears withing the database using the "SHOW 
  1 row in set (0.01 sec)
 ```
 We can remind ourselves about the table's organization with this command:</br>
-`DESCRIBE potluck;`
+`DESCRIBE potluck;`</br>
 Keep in mind througout that, although the MySQL command line does not pay attention to cases, the table and database names are case sensitive: potluck is not the same as POTLUCK or Potluck.
 ```
   mysql>DESCRIBE potluck;
@@ -127,3 +127,5 @@ Keep in mind througout that, although the MySQL command line does not pay attent
  5 rows in set (0.01 sec)
 ```
 ### How to Add Information to a MySQL Table
+
+

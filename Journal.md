@@ -17,3 +17,5 @@ this will be used more often
 11. check to see if that folder is now showing in /mnt/hgfs directory.</br>
 
 ***
+##How to setup my-sql on ubuntu
+i wanted to

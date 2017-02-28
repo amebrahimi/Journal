@@ -23,4 +23,8 @@ i want to setup my-sql on the `tuttifruitti.adad.ws` server to push all my local
 `sudo apt-get install mysql-server`
 ###How to Access the MySQL shell
 Once you have MySQL installed on your droplet, you can access the MySQL shell by typing `mysql -u root -p`</br>
+******
+How to change git remote type (from https:// to ssh)</br>
+i need this alot: git remote git@github.com:amebrahimi/Test.git
+******
 

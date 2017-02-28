@@ -11,6 +11,6 @@ i wanted to share some folders with my ubuntu in VMware Workstation and found th
 this will be used more often
 ---------------------------
 8. Shared folders in Ubuntu appear in the location /mnt/hgfs but it probably is not visible.</br>
-9. To check to see if Ubuntu is aware of the folder use 'vmware-hgfsclient'</br>
-10. now enter 'sudo vmware-config-tools.pl' follow the prompts, aceepting the default values</br>
+9. To check to see if Ubuntu is aware of the folder use `vmware-hgfsclient`</br>
+10. now enter `sudo vmware-config-tools.pl` follow the prompts, aceepting the default values</br>
 11. check to see if that folder is now showing in /mnt/hgfs directory.</br>

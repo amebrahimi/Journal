@@ -196,7 +196,7 @@ Just as you can add a column, you can delete one as well:</br>
 ALTER TABLE potluck DROP email;
 ```
 I guess we will never know how to reach the picnickers.
-#How to Delete a Row
+###How to Delete a Row
 If needed, you can also delete rows from the table with the following command:</br>
 ```
 DELETE from [tabel name] where [column name]=[field text];

@@ -217,3 +217,21 @@ For example if sandy suddenly realied that she will not be able to participate i
   3 rows in set (0.00 sec)
 ```
 Notice that the id numbers associated with each person remain the same.
+******
+##How to install git on ubuntu
+First you must update your **apt** package management then you can download and install</br>
+```
+sudo apt-get update
+sudo apt-get install git
+```
+******
+THIS WILL BE USED ALOT:</br>
+## how to generate a new ssh key
+paste this text to your terminal:
+```
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+and accept all the defaults.[click here for more information](https://help.github.com/articles/working-with-ssh-key-passphrases)
+******
+###How to setup Git
+

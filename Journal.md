@@ -34,7 +34,9 @@ Two points to keep in mind:</br>
 ###How to Create and Delete a MySQL Database
 MySQL organizes its information into databases; each on can hold tables with specific data.</br>
 You can quickly check what databases are available by typing:</br>
-`SHOW DATABASES;`</br>
+```
+SHOW DATABASES;
+```
 Screen should look like this:</br>
 ```
  mysql> SHOW DATABASES;</br>
@@ -49,7 +51,9 @@ Screen should look like this:</br>
  4 rows in set (0.01 sec)
 ```
 Creating database is very easy:</br>
-`CREATE DATABASE database name;`
+```
+CREATE DATABASE database name;
+```
 In this case, for example, we will cal our database "events."</br>
 ```
   mysql> SHOW DATABASES;
@@ -65,7 +69,9 @@ In this case, for example, we will cal our database "events."</br>
  5 rows in set (0.00 sec)
 ```
 In MySQL, the phrase most often used to delete objects is Drop. You would delete a MySQL database with this command:</br>
-`DROP DATABASE database name;`
+```
+DROP DATABASE database name;
+```
 
 ###How to Access a MySQL Database
 Once we have a new database, we can begin to fill it with information.</br>
@@ -75,7 +81,9 @@ the first step is to create a new table within the larger database.</br>
 Let's open the database we want to use:</br>
 `USE events;`
 in the same way that you could check the available databases, you can also see an overview of the tables that the database contains.</br>
-`SHOW tables;`
+```
+SHOW tables;
+```
 Since this is a new database, MySQL has nothing to show, and you will get a message that says, "Empty set"</br>
 
 ### How to Create a My SQL Table

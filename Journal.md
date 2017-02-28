@@ -79,7 +79,9 @@ Once we have a new database, we can begin to fill it with information.</br>
 the first step is to create a new table within the larger database.</br>
 </br>
 Let's open the database we want to use:</br>
-`USE events;`
+```
+USE events;
+```
 in the same way that you could check the available databases, you can also see an overview of the tables that the database contains.</br>
 ```
 SHOW tables;

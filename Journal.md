@@ -131,5 +131,6 @@ Keep in mind througout that, although the MySQL command line does not pay attent
 We have a working table for our party. Now it's time to start filling in the details.</br>
 </br>
 Use this format to insert information into each row:</br>
-`INSER INTO \`potluck\` (\`id\`, \`name\`, \`food\`,\`confirmed\`,\`signup_date\`) VALUES (NULL, "john", "Casserole", "Y", '2012-04-11');`
-
+```
+INSER INTO `potluck` (`id`, `name`, `food`,`confirmed`,`signup_date`) VALUES (NULL, "john", "Casserole", "Y", '2012-04-11');
+```

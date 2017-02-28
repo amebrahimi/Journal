@@ -100,4 +100,30 @@ signup_date DATE);
 <dd>6. The "confirmed" column redords whether the person has RSVP'd with one letter, Y or N.</dd>
 <dd>7. The "date" column will show when they signed up for the events. MySQL requires that dates be written as yyyy-mm-dd
 </dl>
-
+Let's take a look at how the table appears withing the database using the "SHOW TABLES;" command:</br>
+```
+  mysql> SHOW TABLES;
+ +------------------+
+ | Tables_in_events |
+ +------------------+
+ | potluck          |
+ +------------------+
+ 1 row in set (0.01 sec)
+```
+We can remind ourselves about the table's organization with this command:</br>
+`DESCRIBE potluck;`
+Keep in mind througout that, although the MySQL command line does not pay attention to cases, the table and database names are case sensitive: potluck is not the same as POTLUCK or Potluck.
+```
+  mysql>DESCRIBE potluck;
+ +-------------+-------------+------+-----+---------+----------------+
+ | Field       | Type        | Null | Key | Default | Extra          |
+ +-------------+-------------+------+-----+---------+----------------+
+ | id          | int(11)     | NO   | PRI | NULL    | auto_increment |
+ | name        | varchar(20) | YES  |     | NULL    |                |
+ | food        | varchar(30) | YES  |     | NULL    |                |
+ | confirmed   | char(1)     | YES  |     | NULL    |                |
+ | signup_date | date        | YES  |     | NULL    |                |
+ +-------------+-------------+------+-----+---------+----------------+
+ 5 rows in set (0.01 sec)
+```
+### How to Add Information to a MySQL Table

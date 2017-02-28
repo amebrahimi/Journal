@@ -154,3 +154,66 @@ INSERT INTO `potluck` (`id`,`name`,`food`,`confirmed`,`signup_date`) VALUES (NUL
 INSERT INTO `potluck` (`id`,`name`,`food`,`confirmed`,`signup_date`) VALUES (NULL, "Tom", "BBQ","Y", '2012-04-18');
 INSERT INTO `potluck` (`id`,`name`,`food`,`confirmed`,`signup_date`) VALUES (NULL, "Tina", "Salad","Y", '2012-04-10'); 
 ```
+We can take a look at our table:
+```
+  mysql> SELECT * FROM potluck;
+ +----+-------+----------------+-----------+-------------+
+ | id | name  | food           | confirmed | signup_date |
+ +----+-------+----------------+-----------+-------------+
+ |  1 | John  | Casserole      | Y         | 2012-04-11  |
+ |  2 | Sandy | Key Lime Tarts | N         | 2012-04-14  |
+ |  3 | Tom   | BBQ            | Y         | 2012-04-18  |
+ |  4 | Tina  | Salad          | Y         | 2012-04-10  |
+ +----+-------+----------------+-----------+-------------+
+ 4 rows in set (0.00 sec)
+```
+### How to Update Information in the Table
+Now that we have started our potluck list, we can address any posiible changes. For example: Sandy has confirmed that sheis attending, so we are going to update that in the table.</br>
+```
+UPDATE `potluck` 
+SET 
+`confirmed` = 'Y' 
+WHERE `potluck`.`name` ='Sandy';
+```
+You can also use this command to add information into specific cells, eve if they are empty.</br>
+### How to Add and Delete a Column
+We are creating a handy chart, but it is missing some important information: our attendee's emails.</br>
+</br>
+We can easily add this:
+```
+ALTER TABLE potluck ADD email VARCHAR(40);
+```
+This command puts the new column called "email" at the end of the table by default, and the VARCHAR command limits it to 40 characters.</br>
+</br>
+Howeber, if you need to place that column in a specific spot in the table, we can add one more phrase to the command.</br>
+```
+ALTER TABLE potluck ADD email VARCHAR(40) AFTER name;
+```
+Now the new "email" column goes after the column "name".</br>
+</br>
+Just as you can add a column, you can delete one as well:</br>
+```
+ALTER TABLE potluck DROP email;
+```
+I guess we will never know how to reach the picnickers.
+#How to Delete a Row
+If needed, you can also delete rows from the table with the following command:</br>
+```
+DELETE from [tabel name] where [column name]=[field text];
+```
+For example if sandy suddenly realied that she will not be able to participate in the potluck after all, we could quickly eliminate her details.</br>
+```
+  mysql> DELETE from potluck  where name='Sandy';
+  Query OK, 1 row affected (0.00 sec)
+
+  mysql> SELECT * FROM potluck;
+  +----+------+-----------+-----------+-------------+
+  | id | name | food      | confirmed | signup_date |
+  +----+------+-----------+-----------+-------------+
+  |  1 | John | Casserole | Y         | 2012-04-11  |
+  |  3 | Tom  | BBQ       | Y         | 2012-04-18  |
+  |  4 | Tina | Salad     | Y         | 2012-04-10  |
+  +----+------+-----------+-----------+-------------+
+  3 rows in set (0.00 sec)
+```
+Notice that the id numbers associated with each person remain the same.

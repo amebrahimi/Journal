@@ -263,7 +263,7 @@ $ git config --list
 ```
 sudo ufw allow [port]/[optional: protocol]
 ```
-**How to find out what program is in what group**</br>
+**How to find out a program is in what group**</br>
 ```
 ps aux | grep apache # The username should be in the first column.
 ```

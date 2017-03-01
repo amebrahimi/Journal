@@ -257,3 +257,21 @@ and we can list all the configuration items by typing:</br>
 $ git config --list
 ```
 ******
+**For activating and running tuttifruitti site i search among variety of things:**</br>
+## useful commands
+**Allowing a specific port; Ubuntu ufw firewall**</br>
+```
+sudo ufw allow [port]/[optional: protocol]
+```
+**How to find out what program is in what group**</br>
+```
+ps aux | grep apache # The username should be in the first column.
+```
+**How to change a file/folder group***</br>
+```
+chgrp [group_name] [file_name]
+```
+**How to chage a folder and it's subfolders and contents**</br>
+```
+chgrp -R [group_name] [folder_name]
+```

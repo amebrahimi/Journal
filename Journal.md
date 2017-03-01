@@ -245,3 +245,15 @@ Next you must paste the key to -> *settings* -> *SSH and GPG keys* -> *New SSH k
 ******
 ###How to setup Git
 
+**Today is wednesday, 1 MARCH, 2017 and its 7:40 in the morning**</br>
+</br>
+We have git installed now we must do something so that we can commit our changes and the easiest way to do that is with `git config` command.</br>
+```
+$ git config -global user.name "amebrahimi"
+$ git config -global user.email "amirebrahimi5@live.com
+```
+and we can list all the configuration items by typing:</br>
+```
+$ git config --list
+```
+******

@@ -261,19 +261,19 @@ $ git config --list
 ## useful commands
 **Allowing a specific port; Ubuntu ufw firewall**</br>
 ```
-sudo ufw allow [port]/[optional: protocol]
+$ sudo ufw allow [port]/[optional: protocol]
 ```
 **How to find out a program is in what group**</br>
 ```
-ps aux | grep apache # The username should be in the first column.
+$ ps aux | grep apache # The username should be in the first column.
 ```
 **How to change a file/folder group**</br>
 ```
-chgrp [group_name] [file_name]
+$ chgrp [group_name] [file_name]
 ```
 **How to chage a folder and it's subfolders and contents**</br>
 ```
-chgrp -R [group_name] [folder_name]
+$ chgrp -R [group_name] [folder_name]
 ```
 **How t o change group with *chown* Command**</br>
 ```

@@ -267,11 +267,16 @@ sudo ufw allow [port]/[optional: protocol]
 ```
 ps aux | grep apache # The username should be in the first column.
 ```
-**How to change a file/folder group***</br>
+**How to change a file/folder group**</br>
 ```
 chgrp [group_name] [file_name]
 ```
 **How to chage a folder and it's subfolders and contents**</br>
 ```
 chgrp -R [group_name] [folder_name]
+```
+**How t o change group with *chown* Command**</br>
+```
+$ chown user:group [file/dir]
+$ chown :group [file/dir]
 ```

@@ -298,4 +298,8 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
 sudo apt-get update
 ```
 ##Install .NET Core SDK
-Before you start, please remove any previous versions of .NET Core from your system by using [this link](https://github.com/dotnet/cli/blob/rel/2.0.0/scripts/obtain/uninstall/dotnet-uninstall-debian-packages.sh) 
+Before you start, please remove any previous versions of .NET Core from your system by using [this link](https://github.com/dotnet/cli/blob/rel/2.0.0/scripts/obtain/uninstall/dotnet-uninstall-debian-packages.sh) </br>
+To install .NET Core 1.1 on Ubuntu or Linux Mint, simply use apt-get.</br>
+```
+sudo apt-get install dotnet-dev-1.0.1
+```

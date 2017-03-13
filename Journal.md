@@ -280,3 +280,10 @@ $ chgrp -R [group_name] [folder_name]
 $ chown user:group [file/dir]
 $ chown :group [file/dir]
 ```
+**How to setup Open VPN on Linux**</br>
+```
+sudo apt update
+sudo apt upgrade -y
+wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
+./openvpn-install.sh
+```

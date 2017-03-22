@@ -96,6 +96,7 @@ Since this is a new database, MySQL has nothing to show, and you will get a mess
 Let's imagine that we are planning a get together of friends. We can use MySQL to track the details of the even.</br>
 </br>
 Let's create a new MySQL table:
+
 ```
 CREATE TABLE potluck (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 name VARCHAR(20),
@@ -103,6 +104,7 @@ food VARCHAR(30),
 confirmed CHAR(1),
 signup_date DATE);
 ```
+
 <dl>
 <dt>This command accomplishes a number of things:</dt>
 <dd>1. It has created a table called potluck within the directory, events.</dd>
@@ -126,6 +128,7 @@ Let's take a look at how the table appears withing the database using the "SHOW 
 We can remind ourselves about the table's organization with this command:</br>
 `DESCRIBE potluck;`</br>
 Keep in mind througout that, although the MySQL command line does not pay attention to cases, the table and database names are case sensitive: potluck is not the same as POTLUCK or Potluck.
+
 ```
   mysql>DESCRIBE potluck;
  +-------------+-------------+------+-----+---------+----------------+
@@ -139,6 +142,7 @@ Keep in mind througout that, although the MySQL command line does not pay attent
  +-------------+-------------+------+-----+---------+----------------+
  5 rows in set (0.01 sec)
 ```
+
 ### How to Add Information to a MySQL Table
 
 We have a working table for our party. Now it's time to start filling in the details.</br>

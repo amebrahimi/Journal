@@ -31,7 +31,7 @@ Two points to keep in mind:</br>
 * All MySQL commands end with a semicolon; if the phrase does not end with a semicolon, the command will not execute.
 * Also, although it is not required, MySQL commands are usually written in uppercase and databases, tables, usernames, or text are in lowercase to make them easier to distinguish. However, the MySQL command line is not case sensitive.</br>
 
-###How to Create and Delete a MySQL Database
+### How to Create and Delete a MySQL Database
 MySQL organizes its information into databases; each on can hold tables with specific data.</br>
 You can quickly check what databases are available by typing:</br>
 ```

@@ -1,5 +1,7 @@
 #My Journal
+
 ##How to share folders in windows with ubuntu using vmware
+
 Tuseday, 28 FEB, 2017
 i wanted to share some folders with my ubuntu in VMware Workstation and found this [site](http://theholmesoffice.com/how-to-share-folders-between-windows-and-ubuntu-using-vmware-player/) with googling "how to mount a folder in vmware linux" and there was the solution:</br>
 1. Power down the machine (shut down ubuntu)</br>

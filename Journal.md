@@ -1,6 +1,6 @@
-#My Journal
+# My Journal
 
-##How to share folders in windows with ubuntu using vmware
+## How to share folders in windows with ubuntu using vmware
 
 Tuseday, 28 FEB, 2017
 i wanted to share some folders with my ubuntu in VMware Workstation and found this [site](http://theholmesoffice.com/how-to-share-folders-between-windows-and-ubuntu-using-vmware-player/) with googling "how to mount a folder in vmware linux" and there was the solution:</br>
@@ -19,11 +19,11 @@ this will be used more often
 11. check to see if that folder is now showing in /mnt/hgfs directory.</br>
 
 ******
-##How to setup my-sql on ubuntu
+## How to setup my-sql on ubuntu
 i want to setup my-sql on the `tuttifruitti.adad.ws` server to push all my local works to the server. i have searched the google for **digitalocean mysql** and end up with this [site](https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial) and here is how its done:</br>
-###How to install my-sql on ubuntu
+### How to install my-sql on ubuntu
 `sudo apt-get install mysql-server`
-###How to Access the MySQL shell
+### How to Access the MySQL shell
 Once you have MySQL installed on your droplet, you can access the MySQL shell by typing `mysql -u root -p`</br>
 ******
 How to change git remote type (from https:// to ssh)</br>
@@ -75,7 +75,7 @@ In MySQL, the phrase most often used to delete objects is Drop. You would delete
 DROP DATABASE database name;
 ```
 
-###How to Access a MySQL Database
+### How to Access a MySQL Database
 
 Once we have a new database, we can begin to fill it with information.</br>
 </br>
@@ -199,7 +199,7 @@ Just as you can add a column, you can delete one as well:</br>
 ALTER TABLE potluck DROP email;
 ```
 I guess we will never know how to reach the picnickers.
-###How to Delete a Row
+### How to Delete a Row
 If needed, you can also delete rows from the table with the following command:</br>
 ```
 DELETE from [tabel name] where [column name]=[field text];
@@ -221,7 +221,7 @@ For example if sandy suddenly realied that she will not be able to participate i
 ```
 Notice that the id numbers associated with each person remain the same.
 ******
-##How to install git on ubuntu
+## How to install git on ubuntu
 First you must update your **apt** package management then you can download and install</br>
 ```
 sudo apt-get update
@@ -246,7 +246,7 @@ $ xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
 Next you must paste the key to -> *settings* -> *SSH and GPG keys* -> *New SSH key* or *Add SSH key*
 ******
-###How to setup Git
+### How to setup Git
 
 **Today is wednesday, 1 MARCH, 2017 and its 7:40 in the morning**</br>
 </br>
@@ -290,9 +290,9 @@ sudo apt upgrade -y
 wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
 ./openvpn-install.sh
 ```
-#Installing dotnetcore on Linux (Ubuntu)
+# Installing dotnetcore on Linux (Ubuntu)
 
-##Add the dotnet apt-get feed
+## Add the dotnet apt-get feed
 In order to install .NET Core on Ubuntu or Linux Mint, you need to first set up the apt-get feed that hosts the package you need.</br>
 ```
 Ubuntu 16.04
@@ -300,7 +300,7 @@ sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotne
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
 sudo apt-get update
 ```
-##Install .NET Core SDK
+## Install .NET Core SDK
 Before you start, please remove any previous versions of .NET Core from your system by using [this link](https://github.com/dotnet/cli/blob/rel/2.0.0/scripts/obtain/uninstall/dotnet-uninstall-debian-packages.sh). </br>
 .NET Core 1.1 is the latest version. For long term support versions and additional downloads check the [all Linux downloads](https://www.microsoft.com/net/download/linux) section.</br>
 To install .NET Core 1.1 on Ubuntu or Linux Mint, simply use apt-get.</br>

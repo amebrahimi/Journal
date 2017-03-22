@@ -298,9 +298,9 @@ sudo apt upgrade -y
 wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
 ./openvpn-install.sh
 ```
-# Installing dotnetcore on Linux (Ubuntu)
+## Installing dotnetcore on Linux (Ubuntu)
 
-## Add the dotnet apt-get feed
+### Add the dotnet apt-get feed
 In order to install .NET Core on Ubuntu or Linux Mint, you need to first set up the apt-get feed that hosts the package you need.</br>
 ```
 Ubuntu 16.04

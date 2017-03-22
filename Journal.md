@@ -115,7 +115,9 @@ signup_date DATE);
 <dd>6. The "confirmed" column redords whether the person has RSVP'd with one letter, Y or N.</dd>
 <dd>7. The "date" column will show when they signed up for the events. MySQL requires that dates be written as yyyy-mm-dd
 </dl>
+
 Let's take a look at how the table appears withing the database using the "SHOW TABLES;" command:</br>
+
 ```
   mysql> SHOW TABLES;
  +------------------+

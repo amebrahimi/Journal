@@ -74,6 +74,7 @@ DROP DATABASE database name;
 ```
 
 ###How to Access a MySQL Database
+
 Once we have a new database, we can begin to fill it with information.</br>
 </br>
 the first step is to create a new table within the larger database.</br>

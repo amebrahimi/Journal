@@ -304,3 +304,11 @@ To install .NET Core 1.1 on Ubuntu or Linux Mint, simply use apt-get.</br>
 ```
 sudo apt-get install dotnet-dev-1.0.1
 ```
+******
+## Some other useful linux tricks
+
+finding out our linux version
+
+```
+uname -rsv
+```

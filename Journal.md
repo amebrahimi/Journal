@@ -323,3 +323,38 @@ finding out our linux version
 ```
 uname -rsv
 ```
+
+## Install SQL server on Linux Distro
+
+1. Import the public respository GPG keys:</br>
+
+```
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+```
+
+2. Register the Microsoft SQL Server Ubuntu Repository:</br>
+
+```
+curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list | sudo tee /etc/apt/sources.list.d/mssql-server.list
+```
+
+3. Run the following commands to install SQL Server:</br>
+
+```
+sudo apt-get update
+sudo apt-get install -y mssql-server
+```
+
+4. After the package installation finishes, run *mssql-conf setup* and follow the prompts. Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digit and /or non-alphanumeric symbols).</br>
+
+```
+sudo /opt/mssql/bin/mssql-conf setup
+```
+
+5. Once the configuration is done, verify that the service is running:</br>
+
+```
+systemctl status mssql-server
+```
+
+6. To allow remote connections, you may need to open the SQL Server TCP port on your firewall. The fefault SQL Server port is 1433.</br>

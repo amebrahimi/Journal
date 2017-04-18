@@ -358,3 +358,47 @@ systemctl status mssql-server
 ```
 
 6. To allow remote connections, you may need to open the SQL Server TCP port on your firewall. The fefault SQL Server port is 1433.</br>
+
+### Install SQL Server on redhat Enterprise Linux
+
+1. Enter Superuser mode</br>
+
+```
+sudo su
+```
+2. Download the Microsoft SQL server Red Hat Repository configurztion file:</br>
+
+```
+curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo > /etc/yum.repos.d/mssql-server.repo
+```
+3. Exit superuser mode.</br>
+
+```
+exit
+```
+
+4. Run the following commands to install SQL Server:</br>
+
+```
+udo yum install -y mssql-server
+```
+
+5. After the package installation finishes, run mssql-conf setup and follow the prompts. Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).</br>
+
+```
+sudo /opt/mssql/bin/mssql-conf setup
+```
+
+6. Once the configuration is done, verify that the service is running:</br>
+
+```
+systemctl status mssql-server
+```
+
+7. To allow remote connections, open the SQL Server port on the firewall on RHEL. The default SQL Server port is TCP 1433. If you are using FirewallD for your firewall, you can use the following commands:</br>
+
+```
+sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
+sudo firewall-cmd --reload
+```
+

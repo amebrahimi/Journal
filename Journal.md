@@ -453,3 +453,47 @@ sudo mkdir /etc/httpd/sites-available
 ```
 sudo mkdir /etc/httpd/sites-enabled
 ```
+
+**Edit your Apache configuration file**</br>
+Edit the main configuration file (httpd.conf) so that Apache will look for virual hosts in the sites-enabled directory.</br>
+
+1. Open your onfig file:</br>
+```
+sudo vim /etc/httpd/conf/httpd.conf
+```
+2. Add this line at the very end of the file:</br>
+```
+IncludeOptional sites-enabled/*.conf
+```
+This way, were telling Apache to look for additional config files in the sites-enabled direcotry.</br>
+3. Save and colose the file:</br>
+```
+wq!
+```
+
+**Create virual host file**</br>
+1. Create a new config file:</br>
+```
+sudo vim /etc/httpd/sites-available/coolexample.com.conf
+```
+2. Paste this code in, replacing your own domain for coolexample.com.conf.</br>
+Heres what the whole file could look like after your changes:</br>
+```
+<VirtualHost *:80>
+    ServerAdmin webmaster@dummy-host.example.com    
+    ServerName www.coolexample.com
+    ServerAlias coolexample.com 
+    DocumentRoot /var/www/coolexample.com/public_html 
+    ErrorLog /var/www/coolexample.com/error.log 
+    CustomLog /var/www/coolexample.com/requests.log combined 
+</VirtualHost>
+```
+The lines ErrorLog and CustomLog are not required to set up your virtual host, but weve included them, in case you do want to tell Apache where to keep error and request logs for your site.</br>
+Enable your virtual host file with a sym link to the sites-enabled directory:</br>
+```
+sudo ln -s /etc/httpd/sites-available/coolexample.com.conf /etc/httpd/sites-enabled/coolexample.com.conf
+```
+Restart Apache:</br>
+```
+sudo service httpd restart
+```

@@ -401,4 +401,55 @@ systemctl status mssql-server
 sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
 sudo firewall-cmd --reload
 ```
+******
 
+## Install Apache web server
+
+1. Update packages using yum</br>
+
+```
+sudo yum update
+```
+2. Install Apache</br>
+
+```
+sudo yum install httpd
+```
+3. Start up Apache, so that the httpd service will start automatically on a reboot:</br>
+
+```
+sudo service httpd start
+```
+
+### Set up the virtual host
+
+1. Create the virtual directories for your domain:</br>
+
+```
+sudo mkdir -p /var/www/coolexample.com/public_html
+```
+
+2. Change the ownership to the Apache group:</br>
+
+```
+sudo chown -R apache:apache /var/www/coolexample.com/public_html
+```
+This Also lets Apache modify files in your web directories.</br>
+3. Change the directorys permissons so they can be read from the internet:</br>
+
+```
+sudo chmod -R 755 /var/www/
+```
+
+### Configure your virtual host directories
+
+Were going to copy a configuration usually used in Ubuntu/Debian and create two directories: one to store virtual host files (sites-available) and another to hold symbolic links to virtual hosts that will be published (sites-enabled).</br>
+</br>
+*Create sites-available and sites-enabled directories*</br>
+Create thedirectories:
+```
+sudo mkdir /etc/httpd/sites-available
+```
+```
+sudo mkdir /etc/httpd/sites-enabled
+```

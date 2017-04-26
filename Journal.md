@@ -445,7 +445,7 @@ sudo chmod -R 755 /var/www/
 
 Were going to copy a configuration usually used in Ubuntu/Debian and create two directories: one to store virtual host files (sites-available) and another to hold symbolic links to virtual hosts that will be published (sites-enabled).</br>
 </br>
-*Create sites-available and sites-enabled directories*</br>
+**Create sites-available and sites-enabled directories**</br>
 Create thedirectories:
 ```
 sudo mkdir /etc/httpd/sites-available

@@ -323,7 +323,7 @@ finding out our linux version
 ```
 uname -rsv
 ```
-
+******
 ## Install SQL server on Linux Distro
 
 1. Import the public respository GPG keys:</br>

@@ -1,8 +1,8 @@
 # <big><big><big>**index**</big></big></big>
 * [<strong>How to share folders in windows with ubuntu using vmware</strong>](#how-ho-share-folders-in-windows-with-ubuntu-using-vmware)
 * [<strong>How to setup my-sql on ubuntu<strong>](#how-to-setup-my-sql-on-ubuntu)
-  *[How to install my-sql on ubuntu](#how-to-install-my-sql-on-ubuntu)
-  *[How to Access the MySQL shell](#how-to-access-the-mysql-shell)
+  * [How to install my-sql on ubuntu](#how-to-install-my-sql-on-ubuntu)
+  * [How to Access the MySQL shell](#how-to-access-the-mysql-shell)
 
 # My Journal
 

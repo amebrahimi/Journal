@@ -1,3 +1,6 @@
+# <big><big><big>**index**</big></big></big>
+* [<strong>How to share folders in windows with ubuntu using vmware</strong>](#How to share folders in windows with ubuntu using vmware)
+
 # My Journal
 
 ## How to share folders in windows with ubuntu using vmware

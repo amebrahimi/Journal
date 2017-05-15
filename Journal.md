@@ -19,8 +19,16 @@
   * [Add the dotnet apt-get feed](#add-the-dotnet-apt-get-feed)
   * [Install .NET Core SDK](#install-.netcore-sdk)
 * [<strong>Some other useful linux tricks</strong>](#some-other-useful-linux-tricks)
-  
-  
+* [<strong>Install SQL server on Ubuntu like Linux Distro</strong>](#install-sql-server-on-ubuntu-like-linux-distro)
+* [<strong>Install SQL Server on redhat Enterprise Linux</strong>](#install-sql-server-on-redhat-enterprise-linux)
+* [<strong>Install Apache web server</strong>](#install-apache-web-server)
+  * [Set up the virtual host](#setup-virtual-host)
+  * [Configure your virtual host directories](#configure your virtual host directories)
+* [<strong>Config a computer for using ssh pull/push git</strong>](#Config-a-computer-for-using-ssh-pull-push-git)
+  * [Checking for existing SSh Keys](#checking-for-existing-ssh-keys)
+  * [Generating a new SSH key](#generating-a-new-ssh-key)
+  * [Adding your SSH key to the ssh-agent](#adding-your-ssh-key-to-the-ssh-agent)
+  * [Adding a new SSH key to your GitHub account](#adding-a-new-ssh-key-to-your-github-account)
 
 # My Journal
 
@@ -324,6 +332,7 @@ sudo apt upgrade -y
 wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
 ./openvpn-install.sh
 ```
+******
 ## Installing dotnetcore on Linux (Ubuntu)
 
 ### Add the dotnet apt-get feed
@@ -334,7 +343,7 @@ sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotne
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
 sudo apt-get update
 ```
-## Install .NET Core SDK
+### Install .NET Core SDK
 Before you start, please remove any previous versions of .NET Core from your system by using [this link](https://github.com/dotnet/cli/blob/rel/2.0.0/scripts/obtain/uninstall/dotnet-uninstall-debian-packages.sh). </br>
 .NET Core 1.1 is the latest version. For long term support versions and additional downloads check the [all Linux downloads](https://www.microsoft.com/net/download/linux) section.</br>
 To install .NET Core 1.1 on Ubuntu or Linux Mint, simply use apt-get.</br>
@@ -385,7 +394,7 @@ systemctl status mssql-server
 
 6. To allow remote connections, you may need to open the SQL Server TCP port on your firewall. The fefault SQL Server port is 1433.</br>
 
-### Install SQL Server on redhat Enterprise Linux
+## Install SQL Server on redhat Enterprise Linux
 
 1. Enter Superuser mode</br>
 
@@ -523,6 +532,7 @@ Restart Apache:</br>
 ```
 sudo service httpd restart
 ```
+******
 ## Config a computer for using ssh pull/push git
 ### Checking for existing SSh Keys
 1. Open Terminal.</br>

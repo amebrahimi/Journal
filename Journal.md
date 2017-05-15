@@ -10,6 +10,8 @@
   * [How to Update Information in the Table](#how-to-update-information-in-the-table)
   * [How to Add and Delete a Column](#how-to-add-and-delete-a-column)
   * [How to Delete a Row](#how-to-delete-a-row)
+  * [How to convert a MySQL database to UTF-8 encoding](#how-to-convert-a-mysql-database-to-utf-8-encoding)
+	* [Determine the current character encoding set](#Determine-the-current-character-encoding-set)
 * [<strong>How to install git on ubuntu</strong>](#how-to-install-git-on-ubuntu)
   * [How to generate a new ssh key](#how-to-generate-a-new-ssh-key)
   * [How to copy things into clip board from terminal using xlcip](#how-to-copy-things-into-clip-board-from-terminal-using-xclip)
@@ -139,7 +141,7 @@ signup_date DATE);
 <dd>4. The "name" column has been limited by VARCHAR command to be under 20 characters long.</dd>
 <dd>5. The "food" column designates the food each person will bring. The VARCHAR limits text to be under 30 characters.</dd>
 <dd>6. The "confirmed" column redords whether the person has RSVP'd with one letter, Y or N.</dd>
-<dd>7. The "date" column will show when they signed up for the events. MySQL requires that dates be written as yyyy-mm-dd
+<dd>7. The "date" column will show when they signed up for the events. MySQL requires that dates be written as yyyy-mm-dd</dd>
 </dl>
 
 Let's take a look at how the table appears withing the database using the "SHOW TABLES;" command:</br>
@@ -254,6 +256,16 @@ For example if sandy suddenly realied that she will not be able to participate i
   3 rows in set (0.00 sec)
 ```
 Notice that the id numbers associated with each person remain the same.
+## How to convert a MySQL database to UTF-8 encoding
+### Determine the current character encoding set
+To determine which character encoding set a MySQL database or table is currently using:</br>
+ 1. Log in to your A2 Hosting SSH account.</br>
+ 2. At the command line, type the following command, replacing USERNAME with your username:</br>
+```
+mysql -u USERNAME -p
+```
+
+
 ******
 # How to install git on ubuntu
 First you must update your **apt** package management then you can download and install</br>

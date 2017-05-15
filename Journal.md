@@ -1,5 +1,6 @@
 # <big><big><big>**index**</big></big></big>
-* [<strong>How to share folders in windows with ubuntu using vmware</strong>](#How-to-share-folders-in-windows-with-ubuntu-using-vmware)
+* [<strong>How to share folders in windows with ubuntu using vmware</strong>](#how-ho-share-folders-in-windows-with-ubuntu-using-vmware)
+* [<strong>How to setup my-sql on ubuntu<strong>](#how-to-setup-my-sql-on-ubuntu)
 
 # My Journal
 

@@ -23,7 +23,7 @@
 * [<strong>Install SQL Server on redhat Enterprise Linux</strong>](#install-sql-server-on-redhat-enterprise-linux)
 * [<strong>Install Apache web server</strong>](#install-apache-web-server)
   * [Set up the virtual host](#setup-virtual-host)
-  * [Configure your virtual host directories](#configure your virtual host directories)
+  * [Configure your virtual host directories](#configure-your-virtual-host-directories)
 * [<strong>Config a computer for using ssh pull/push git</strong>](#Config-a-computer-for-using-ssh-pull-push-git)
   * [Checking for existing SSh Keys](#checking-for-existing-ssh-keys)
   * [Generating a new SSH key](#generating-a-new-ssh-key)

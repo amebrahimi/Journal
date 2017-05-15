@@ -3,6 +3,24 @@
 * [<strong>How to setup my-sql on ubuntu<strong>](#how-to-setup-my-sql-on-ubuntu)
   * [How to install my-sql on ubuntu](#how-to-install-my-sql-on-ubuntu)
   * [How to Access the MySQL shell](#how-to-access-the-mysql-shell)
+  * [How to Create and Delete a MySQL Database](#how-to-create-and-delete-a-mysql-database)
+  * [How to Access a MySQL Database](#how-to-access-a-my-sql-database)
+  * [How to Create a My SQL Table](#how-to-create-a-my-sql-table)
+  * [How to Add Information to a MySQL Table](#how-to-add-information-to-a-my-sql-table)
+  * [How to Update Information in the Table](#how-to-update-information-in-the-table)
+  * [How to Add and Delete a Column](#how-to-add-and-delete-a-column)
+  * [How to Delete a Row](#how-to-delete-a-row)
+* [<strong>How to install git on ubuntu</strong>](#how-to-install-git-on-ubuntu)
+  * [How to generate a new ssh key](#how-to-generate-a-new-ssh-key)
+  * [How to copy things into clip board from terminal using xlcip](#how-to-copy-things-into-clip-board-from-terminal-using-xclip)
+  * [How to setup Git](#how-to-setup-git)
+* [<strong>useful commands</strong>](#useful-commands)
+* [<strong>Installing dotnetcore on Linux (Ubuntu)</strong>](#installing-dotnetcore-on-linux)
+  * [Add the dotnet apt-get feed](#add-the-dotnet-apt-get-feed)
+  * [Install .NET Core SDK](#install-.netcore-sdk)
+* [<strong>Some other useful linux tricks</strong>](#some-other-useful-linux-tricks)
+  
+  
 
 # My Journal
 
@@ -184,7 +202,9 @@ We can take a look at our table:
  +----+-------+----------------+-----------+-------------+
  4 rows in set (0.00 sec)
 ```
-### How to Update Information in the Table
+### How to Update Information in the Table](#how-to-update-information-in-the-table)
+* [How to Add and Delete a Column](#how-to-add-and-delete-a-column)
+* [How to Delete a Row](#how-to-delete-a-r* [<strong>Information in the Table
 Now that we have started our potluck list, we can address any posiible changes. For example: Sandy has confirmed that sheis attending, so we are going to update that in the table.</br>
 ```
 UPDATE `potluck` 
@@ -235,7 +255,7 @@ For example if sandy suddenly realied that she will not be able to participate i
 ```
 Notice that the id numbers associated with each person remain the same.
 ******
-## How to install git on ubuntu
+# How to install git on ubuntu
 First you must update your **apt** package management then you can download and install</br>
 ```
 sudo apt-get update
@@ -243,7 +263,7 @@ sudo apt-get install git
 ```
 ******
 THIS WILL BE USED ALOT:</br>
-## How to generate a new ssh key
+### How to generate a new ssh key
 paste this text to your terminal:
 ```
 $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"

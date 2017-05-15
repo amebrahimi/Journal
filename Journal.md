@@ -204,9 +204,7 @@ We can take a look at our table:
  +----+-------+----------------+-----------+-------------+
  4 rows in set (0.00 sec)
 ```
-### How to Update Information in the Table](#how-to-update-information-in-the-table)
-* [How to Add and Delete a Column](#how-to-add-and-delete-a-column)
-* [How to Delete a Row](#how-to-delete-a-r* [<strong>Information in the Table
+Information in the Table
 Now that we have started our potluck list, we can address any posiible changes. For example: Sandy has confirmed that sheis attending, so we are going to update that in the table.</br>
 ```
 UPDATE `potluck` 

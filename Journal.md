@@ -12,6 +12,7 @@
   * [How to Delete a Row](#how-to-delete-a-row)
   * [How to convert a MySQL database to UTF-8 encoding](#how-to-convert-a-mysql-database-to-utf-8-encoding)
 	* [Determine the current character encoding set](#Determine-the-current-character-encoding-set)
+	* [Convert the character encoding set to UTF-8](#convert-the-character-encoding-set-to-utf-8)
 * [<strong>How to install git on ubuntu</strong>](#how-to-install-git-on-ubuntu)
   * [How to generate a new ssh key](#how-to-generate-a-new-ssh-key)
   * [How to copy things into clip board from terminal using xlcip](#how-to-copy-things-into-clip-board-from-terminal-using-xclip)
@@ -264,6 +265,46 @@ To determine which character encoding set a MySQL database or table is currently
 ```
 mysql -u USERNAME -p
 ```
+ 3. At the Enter Password prompt, type your password. When you type the correct password, the mysql> prompt appears.</br>
+ 4. To display the current character encoding set for a particular database, type the following command at the mysql> prompt. Replace DBNAME with the database name:</br>
+```
+SELECT default_character_set_name FROM information_schema.SCHEMATA S WHERE schema_name = "DBNAME";
+```
+ 5. To display the current character encoding set for a particular table in a database, type the following command at the mysql> prompt. Replace DBNAME with the database name, and TABLENAME with the name of the table:</br>
+```
+SELECT CCSA.character_set_name FROM information_schema.`TABLES` T,information_schema.`COLLATION_CHARACTER_SET_APPLICABILITY` CCSA WHERE CCSA.collation_name = T.table_collation AND T.table_schema = "DBNAME" AND T.table_name = "TABLENAME";
+```
+ 6. To exit the mysql program, type \q at the mysql> prompt.</br>
+### Convert the character encoding set to UTF-8
+ 1. Log in to your A2 Hosting SSH account.</br>
+ 2. Create a text file named .my.cnf. To do this, you can use a text editor such as Vim or Nano. This procedure shows how to use Nano. At the command line, type the following command: </br>
+```
+$ vim .my.cnf
+```
+ 3. Add the following lines to the file, replacing USERNAME with your username and PASSWORD with your password (make sure the password is enclosed in quotation marks):</br>
+```
+[client]
+user=USERNAME
+password="PASSWORD"
+```
+ 4. To change the character set encoding to UTF-8 for all of the tables in the specified database, type the following command at the command line. Replace DBNAME with the database name:</br>
+```
+mysql --database=DBNAME -B -N -e "SHOW TABLES" | awk '{print "SET foreign_key_checks = 0; ALTER TABLE", $1, "CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci; SET foreign_key_checks = 1; "}' | mysql --database=DBNAME
+```
+ 5. After the command finishes, type the following command to start the mysql program:</br>
+```
+$ mysql
+```
+ 6. To change the character set encoding to UTF-8 for the database itself, type the following command at the mysql> prompt. Replace DBNAME with the database name:</br>
+```
+ALTER DATABASE DBNAME CHARACTER SET utf8 COLLATE utf8_general_ci;
+```
+ 7. To exit the mysql program, type \q at the mysql> prompt.</br>
+ 8. To delete the .my.cnf file, type the following command at the command line:</br>
+```
+$ rm .my.cnf
+```
+ 9. To verify that the character set encoding is now set to UTF-8, follow the steps in the [Determine the current character encoding set](#determine-the-current-character-encoding-set) procedure above.
 
 
 ******

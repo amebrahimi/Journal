@@ -497,3 +497,40 @@ Restart Apache:</br>
 ```
 sudo service httpd restart
 ```
+## Config a computer for using ssh pull/push git
+### Checking for existing SSh Keys
+1. Open Terminal.</br>
+2. Enter `ls -al ~/.ssh` to see if existing SSH keys are present</br>
+3. Check the directory listing to see if you already have a public SSH key.</br>If you don't have an existing public and private key pair, or don't wish to use any that are available to connect to GitHub, then generate a new SSH key.</br>
+### Generating a new SSH key
+1. Open terminal</br>
+2. Paste the text below, substituting in your GitHub email address.</br>
+```
+$ ssh-keygen -t rsa -b 4096 -c "your_email@example.com"
+```
+This creates a new ssh key, using the provided email as a lable.</br>
+3. when you're prompted to "Enter a file in which to save the key," press Enter. This accepsts the default file location.</br>
+4. At the prompt, type a secure passphrase.(or press enter)</br>
+### Adding your SSH key to the ssh-agent
+1. Satrt the ssh-agent in the background.</br>
+```
+$ eval "$(ssh-agent -s)"
+```
+2. Add your SSH private key to the ssh-agent. if you created your key with a different name, or if you are adding an existing key tha has a different name, replace id_rsa in the command with the name of your private key file.</br>
+```
+$ ssh-add ~/.ssh/id_rsa
+```
+### Adding a new SSH key to your GitHub account
+1. Copy the SSH key to your clipboard.</br>
+If your SSH key files has a different name than the example code, moidfy the filename to match your current setup. Wnen copying your key, don't add any newlines or whitespace.
+```
+$ sudo apt-get install xlclip
+$ xclip -sel clip < ~/.ssh/id_rsa.pub
+```
+2. In the Upper-right corner of any page, click your profile photo, then click Settings.</br>
+3. In the User Settings sidebar, click SSH and GPG keys.</br>
+4. Click **New SSH key** or **Add SSH key**.
+5. Click the "Title" field, add a desciptive label for the new key. For Example, if you're using a personal Mac, you might call this key "Personal MacBook Air".</br>
+6. Paste your key into the "key" field.</br>
+7. Click **Add SSH key**.</br>
+8. if prompted, confirm your GitHub password.

@@ -55,10 +55,6 @@ i want to setup my-sql on the `tuttifruitti.adad.ws` server to push all my local
 `sudo apt-get install mysql-server`
 ### How to Access the MySQL shell
 Once you have MySQL installed on your droplet, you can access the MySQL shell by typing `mysql -u root -p`</br>
-******
-How to change git remote type (from https:// to ssh)</br>
-i need this alot: git remote set-url origin git@github.com:amebrahimi/Test.git
-******
 Two points to keep in mind:</br>
 * All MySQL commands end with a semicolon; if the phrase does not end with a semicolon, the command will not execute.
 * Also, although it is not required, MySQL commands are usually written in uppercase and databases, tables, usernames, or text are in lowercase to make them easier to distinguish. However, the MySQL command line is not case sensitive.</br>
@@ -356,6 +352,8 @@ finding out our linux version
 ```
 uname -rsv
 ```
+How to change git remote type (from https:// to ssh)</br>
+i need this alot: git remote set-url origin git@github.com:amebrahimi/Test.git
 ******
 ## Install SQL server on Ubuntu like Linux Distro
 

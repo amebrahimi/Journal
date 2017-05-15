@@ -261,7 +261,6 @@ First you must update your **apt** package management then you can download and 
 sudo apt-get update
 sudo apt-get install git
 ```
-******
 THIS WILL BE USED ALOT:</br>
 ### How to generate a new ssh key
 paste this text to your terminal:
@@ -269,7 +268,7 @@ paste this text to your terminal:
 $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 and accept all the defaults.[click here for more information](https://help.github.com/articles/working-with-ssh-key-passphrases)</br>
-## How to copy things into clip board from terminal using xlcip
+### How to copy things into clip board from terminal using xlcip
 First install xclip using:</br>
 ```
 $ sudo apt-get install xclip
@@ -279,7 +278,6 @@ then copy the thing you want to copy using:
 $ xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
 Next you must paste the key to -> *settings* -> *SSH and GPG keys* -> *New SSH key* or *Add SSH key*
-******
 ### How to setup Git
 
 **Today is wednesday, 1 MARCH, 2017 and its 7:40 in the morning**</br>

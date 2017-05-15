@@ -24,7 +24,7 @@
 * [<strong>Install Apache web server</strong>](#install-apache-web-server)
   * [Set up the virtual host](#setup-virtual-host)
   * [Configure your virtual host directories](#configure-your-virtual-host-directories)
-* [<strong>Config a computer for using ssh pull/push git</strong>](#Config-a-computer-for-using-ssh-pull-push-git)
+* [<strong>Config a computer for using ssh pull/push git</strong>](#Config-a-computer-for-using-ssh-pull-/-push-git)
   * [Checking for existing SSh Keys](#checking-for-existing-ssh-keys)
   * [Generating a new SSH key](#generating-a-new-ssh-key)
   * [Adding your SSH key to the ssh-agent](#adding-your-ssh-key-to-the-ssh-agent)

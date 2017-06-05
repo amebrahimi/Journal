@@ -32,6 +32,7 @@
   * [Generating a new SSH key](#generating-a-new-ssh-key)
   * [Adding your SSH key to the ssh-agent](#adding-your-ssh-key-to-the-ssh-agent)
   * [Adding a new SSH key to your GitHub account](#adding-a-new-ssh-key-to-your-github-account)
+* [<strong>How to copy files and folders with ftp<strong>](#how-to-copy-files-and-folders-with-ftp)
 
 # My Journal
 
@@ -615,3 +616,23 @@ $ xclip -sel clip < ~/.ssh/id_rsa.pub
 6. Paste your key into the "key" field.</br>
 7. Click **Add SSH key**.</br>
 8. if prompted, confirm your GitHub password.
+
+******
+
+# How to copy files and folders with ftp
+
+1. install ncftp
+```
+yum install ncftp
+```
+or
+```
+apt-get install ncftp
+```
+2. Execute the following command
+```
+ncftpput -R -v -u "ftp-username" ftp.website.com ftp-upload-path local-path/*
+```
+
+******
+

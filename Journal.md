@@ -27,6 +27,7 @@
 * [<strong>Install Apache web server</strong>](#install-apache-web-server)
   * [Set up the virtual host](#setup-virtual-host)
   * [Configure your virtual host directories](#configure-your-virtual-host-directories)
+  * [Ready up site for laravel](#ready-up-site-for-laravel)
 * [<strong>Config a computer for using ssh pull/push git</strong>](#Config-a-computer-for-using-ssh-pull-/-push-git)
   * [Checking for existing SSh Keys](#checking-for-existing-ssh-keys)
   * [Generating a new SSH key](#generating-a-new-ssh-key)
@@ -577,6 +578,12 @@ sudo ln -s /etc/httpd/sites-available/coolexample.com.conf /etc/httpd/sites-enab
 Restart Apache:</br>
 ```
 sudo service httpd restart
+```
+
+### Ready up site for laravel
+If you want to ready your site which is using laravel type the following command in the directory of the site
+```
+$ composer install
 ```
 ******
 ## Config a computer for using ssh pull/push git

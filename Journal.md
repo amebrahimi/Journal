@@ -347,7 +347,6 @@ and we can list all the configuration items by typing:</br>
 $ git config --list
 ```
 ******
-**For activating and running tuttifruitti site i search among variety of things:**</br>
 ## Useful commands for Linux
 **Allowing a specific port; Ubuntu ufw firewall**</br>
 ```
@@ -400,7 +399,8 @@ on a newer version</br>
 ```
 systemctl status udev
 ```
-. udev is an example of a service</br>
+* udev is an example of a service</br>
+
 **How to check size of directory's content**</br>
 ```
 du -sh [directory name]

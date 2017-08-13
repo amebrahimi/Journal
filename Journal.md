@@ -17,7 +17,21 @@
   * [How to generate a new ssh key](#how-to-generate-a-new-ssh-key)
   * [How to copy things into clip board from terminal using xlcip](#how-to-copy-things-into-clip-board-from-terminal-using-xclip)
   * [How to setup Git](#how-to-setup-git)
-* [<strong>useful commands for Linux</strong>](#useful-commands-for-linux)
+ * [Useful commands for Linux](#useful-commands-for-linux)
+    * [Allowing a specific port; Ubuntu ufw firewall](#allowing-a-specific-port-ubuntu-ufw-firewall)
+    * [How to find out a program is in what group](#how-to-find-out-a-program-is-in-what-group)
+    * [How to change a file/folder group](#how-to-change-a-filefolder-group)
+    * [How to chage a folder and it's subfolders and contents](#how-to-chage-a-folder-and-its-subfolders-and-contents)
+    * [How to change group with chown Command](#how-to-change-group-with-chown-command)
+    * [How to setup Open VPN on Linux](#how-to-setup-open-vpn-on-linux)
+    * [How to see the kernel version](#how-to-see-the-kernel-version)
+    * [How to see the systems current ip address](#how-to-see-the-systems-current-ip-address)
+    * [How to check for free disk space](#how-to-check-for-free-disk-space)
+    * [How to manage services](#how-to-manage-services)
+    * [How to check size of directory's content](#how-to-check-size-of-directorys-content)
+    * [How to check for open port](#how-to-check-for-open-port)
+    * [How to check the cpu usage](#how-to-check-the-cpu-usage)
+    * [How to mount drives](#how-to-mount-drives)
 * [<strong>Installing dotnetcore on Linux (Ubuntu)</strong>](#installing-dotnetcore-on-linux)
   * [Add the dotnet apt-get feed](#add-the-dotnet-apt-get-feed)
   * [Install .NET Core SDK](#install-.netcore-sdk)
@@ -348,50 +362,50 @@ $ git config --list
 ```
 ******
 ## Useful commands for Linux
-**Allowing a specific port; Ubuntu ufw firewall**</br>
+### Allowing a specific port; Ubuntu ufw firewall
 ```
 $ sudo ufw allow [port]/[optional: protocol]
 ```
-**How to find out a program is in what group**</br>
+### How to find out a program is in what group
 ```
 $ ps aux | grep apache # The username should be in the first column.
 ```
-**How to change a file/folder group**</br>
+### How to change a file/folder group
 ```
 $ chgrp [group_name] [file_name]
 ```
-**How to chage a folder and it's subfolders and contents**</br>
+### How to chage a folder and it's subfolders and contents
 ```
 $ chgrp -R [group_name] [folder_name]
 ```
-**How t o change group with *chown* Command**</br>
+### How to change group with chown Command
 ```
 $ chown user:group [file/dir]
 $ chown :group [file/dir]
 ```
-**How to setup Open VPN on Linux**</br>
+### How to setup Open VPN on Linux
 ```
 sudo apt update
 sudo apt upgrade -y
 wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
 ./openvpn-install.sh
 ```
-**How to see the kernel version**</br>
+### How to see the kernel version
 ```
 uname -a
 ```
-**How to see the systems current ip address**</br>
+### How to see the systems current ip address
 ```
 ifconfig
 ```
 ```
 ip addr show
 ```
-**How to check for free disk space**</br>
+### How to check for free disk space 
 ```
 df -ah
 ```
-**How to manage services**</br>
+### How to manage services 
 ```
 service udev status
 ```
@@ -401,18 +415,18 @@ systemctl status udev
 ```
 * udev is an example of a service</br>
 
-**How to check size of directory's content**</br>
+### How to check size of directory's content
 ```
 du -sh [directory name]
 ```
-**How to check for open port**</br>
+### How to check for open port 
 ```
 netstat -tulpn
 ```
 t="TCP"</br>
 u="UDP"</br>
 l="Listening"</br>
-**How to check the cpu usage**</br>
+### How to check the cpu usage
 ```
 pas aux | grep [process name]
 ```
@@ -423,7 +437,7 @@ top
 htop
 ```
 htop is not installed on default</br>
-**How to mount drives**</br>
+### How to mount drives
 Linux generally have /mnt directory</br>
 ```
 mount /dev/sda2 /mnt
@@ -436,13 +450,10 @@ If you automatically want to mount at boot</br>
 ```
 file /etc/fstab
 ```
-**How to look up something you dont know**
+### How to look up something you dont know
 ```
 man [command]
 ```
-
-
-
 ******
 ## Installing dotnetcore on Linux (Ubuntu)
 

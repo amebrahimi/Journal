@@ -17,7 +17,7 @@
   * [How to generate a new ssh key](#how-to-generate-a-new-ssh-key)
   * [How to copy things into clip board from terminal using xlcip](#how-to-copy-things-into-clip-board-from-terminal-using-xclip)
   * [How to setup Git](#how-to-setup-git)
-* [<strong>useful commands</strong>](#useful-commands)
+* [<strong>useful commands for Linux</strong>](#useful-commands-for-linux)
 * [<strong>Installing dotnetcore on Linux (Ubuntu)</strong>](#installing-dotnetcore-on-linux)
   * [Add the dotnet apt-get feed](#add-the-dotnet-apt-get-feed)
   * [Install .NET Core SDK](#install-.netcore-sdk)
@@ -348,7 +348,7 @@ $ git config --list
 ```
 ******
 **For activating and running tuttifruitti site i search among variety of things:**</br>
-## useful commands
+## Useful commands for Linux
 **Allowing a specific port; Ubuntu ufw firewall**</br>
 ```
 $ sudo ufw allow [port]/[optional: protocol]
@@ -377,6 +377,72 @@ sudo apt upgrade -y
 wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
 ./openvpn-install.sh
 ```
+**How to see the kernel version**</br>
+```
+uname -a
+```
+**How to see the systems current ip address**</br>
+```
+ifconfig
+```
+```
+ip addr show
+```
+**How to check for free disk space**</br>
+```
+df -ah
+```
+**How to manage services**</br>
+```
+service udev status
+```
+on a newer version</br>
+```
+systemctl status udev
+```
+. udev is an example of a service</br>
+**How to check size of directory's content**</br>
+```
+du -sh [directory name]
+```
+**How to check for open port**</br>
+```
+netstat -tulpn
+```
+t="TCP"</br>
+u="UDP"</br>
+l="Listening"</br>
+**How to check the cpu usage**</br>
+```
+pas aux | grep [process name]
+```
+```
+top
+```
+```
+htop
+```
+htop is not installed on default</br>
+**How to mount drives**</br>
+Linux generally have /mnt directory</br>
+```
+mount /dev/sda2 /mnt
+```
+Checking for existing mounts</br>
+```
+mount
+```
+If you automatically want to mount at boot</br>
+```
+file /etc/fstab
+```
+**How to look up something you dont know**
+```
+man [command]
+```
+
+
+
 ******
 ## Installing dotnetcore on Linux (Ubuntu)
 

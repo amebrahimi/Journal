@@ -1,6 +1,6 @@
-# <big><big><big>index</big></big></big>
-* [<strong>How to share folders in windows with ubuntu using vmware</strong>](#how-ho-share-folders-in-windows-with-ubuntu-using-vmware)
-* [<strong>How to setup my-sql on ubuntu<strong>](#how-to-setup-my-sql-on-ubuntu)
+# index
+* [How to share folders in windows with ubuntu using vmware](#how-ho-share-folders-in-windows-with-ubuntu-using-vmware)
+* [How to setup my-sql on ubuntu](#how-to-setup-my-sql-on-ubuntu)
   * [How to install my-sql on ubuntu](#how-to-install-my-sql-on-ubuntu)
   * [How to Access the MySQL shell](#how-to-access-the-mysql-shell)
   * [How to Create and Delete a MySQL Database](#how-to-create-and-delete-a-mysql-database)
@@ -11,13 +11,13 @@
   * [How to Add and Delete a Column](#how-to-add-and-delete-a-column)
   * [How to Delete a Row](#how-to-delete-a-row)
   * [How to convert a MySQL database to UTF-8 encoding](#how-to-convert-a-mysql-database-to-utf-8-encoding)
-	* [Determine the current character encoding set](#Determine-the-current-character-encoding-set)
-	* [Convert the character encoding set to UTF-8](#convert-the-character-encoding-set-to-utf-8)
+    * [Determine the current character encoding set](#Determine-the-current-character-encoding-set)
+    * [Convert the character encoding set to UTF-8](#convert-the-character-encoding-set-to-utf-8)
 * [<strong>How to install git on ubuntu</strong>](#how-to-install-git-on-ubuntu)
   * [How to generate a new ssh key](#how-to-generate-a-new-ssh-key)
   * [How to copy things into clip board from terminal using xlcip](#how-to-copy-things-into-clip-board-from-terminal-using-xclip)
   * [How to setup Git](#how-to-setup-git)
- * [Useful commands for Linux](#useful-commands-for-linux)
+* [Useful commands for Linux](#useful-commands-for-linux)
     * [Allowing a specific port; Ubuntu ufw firewall](#allowing-a-specific-port-ubuntu-ufw-firewall)
     * [How to find out a program is in what group](#how-to-find-out-a-program-is-in-what-group)
     * [How to change a file/folder group](#how-to-change-a-filefolder-group)
@@ -32,13 +32,14 @@
     * [How to check for open port](#how-to-check-for-open-port)
     * [How to check the cpu usage](#how-to-check-the-cpu-usage)
     * [How to mount drives](#how-to-mount-drives)
-* [<strong>Installing dotnetcore on Linux (Ubuntu)</strong>](#installing-dotnetcore-on-linux)
+    * [How to set SSH Passwordless Login Using SSH Keygen](#how-to-set-ssh-passwordless-login-using-ssh-keygen]
+* [Installing dotnetcore on Linux (Ubuntu)](#installing-dotnetcore-on-linux)
   * [Add the dotnet apt-get feed](#add-the-dotnet-apt-get-feed)
   * [Install .NET Core SDK](#install-.netcore-sdk)
-* [<strong>Some other useful linux tricks</strong>](#some-other-useful-linux-tricks)
-* [<strong>Install SQL server on Ubuntu like Linux Distro</strong>](#install-sql-server-on-ubuntu-like-linux-distro)
-* [<strong>Install SQL Server on redhat Enterprise Linux</strong>](#install-sql-server-on-redhat-enterprise-linux)
-* [<strong>Install Apache web server</strong>](#install-apache-web-server)
+* [Some other useful linux tricks](#some-other-useful-linux-tricks)
+* [Install SQL server on Ubuntu like Linux Distro](#install-sql-server-on-ubuntu-like-linux-distro)
+* [Install SQL Server on redhat Enterprise Linux](#install-sql-server-on-redhat-enterprise-linux)
+* [Install Apache web server](#install-apache-web-server)
   * [Set up the virtual host](#setup-virtual-host)
   * [Configure your virtual host directories](#configure-your-virtual-host-directories)
   * [Ready up site for laravel](#ready-up-site-for-laravel)
@@ -454,6 +455,61 @@ file /etc/fstab
 ```
 man [command]
 ```
+### How to set SSH Passwordless Login Using SSH Keygen
+Step 1: Create Authentication SSH-Kegen Keys on</br>
+First login into server you want to login from and generate a pair of public keys using following command.</br>
+```
+ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/tecmint/.ssh/id_rsa): [Press enter key]
+Created directory '/home/tecmint/.ssh'.
+Enter passphrase (empty for no passphrase): [Press enter key]
+Enter same passphrase again: [Press enter key]
+Your identification has been saved in /home/tecmint/.ssh/id_rsa.
+Your public key has been saved in /home/tecmint/.ssh/id_rsa.pub.
+The key fingerprint is:
+5f:ad:40:00:8a:d1:9b:99:b3:b0:f8:08:99:c3:ed:d3 tecmint@tecmint.com
+The key's randomart image is:
++--[ RSA 2048]----+
+|        ..oooE.++|
+|         o. o.o  |
+|          ..   . |
+|         o  . . o|
+|        S .  . + |
+|       . .    . o|
+|      . o o    ..|
+|       + +       |
+|        +.       |
++-----------------+
+```
+Step 2: Create .ssh Directory on destination</br>
+Use SSH from first server to connect to remote server and create .ssh directory under it, using following command.</br>
+```
+ssh user@remoteip mkdir -p .ssh
+The authenticity of host 'remoteip (remoteip)' can't be established.
+RSA key fingerprint is 45:0e:28:11:d6:81:62:16:04:3f:db:38:02:la:22:4e.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'remoteip' (ECDSA) to the list of known hosts.
+user@remoteip's password: [Enter Your Password Here]
+```
+Step 3: Upload Generated Public Keys</br>
+se SSH from server and upload new generated public key (id_rsa.pub) on the remote server .ssh directory as a file name authorized_keys.</br>
+```
+cat .ssh/id_rsa.pub | ssh sheena@192.168.0.11 'cat >> .ssh/authorized_keys'
+user@remoteip's password: [Enter Your Password Here]
+```
+Step 4: Set Permissions on remote server</br>
+Due to different SSH versions on servers, we need to set permissions on .ssh directory and authorized_keys file.</br>
+```
+ssh user@remoteip "chmod 700 .ssh; chmod 640 .ssh/authorized_keys"
+user@remoteip's password: [Enter Your Password Here]
+```
+Step 5: Login from server to remote Server without Password</br>
+From now onwards you can log into remote as user from server as user without password.
+```
+ssh user@remoteserverip
+```
+
 ******
 ## Installing dotnetcore on Linux (Ubuntu)
 
@@ -472,7 +528,6 @@ To install .NET Core 1.1 on Ubuntu or Linux Mint, simply use apt-get.</br>
 ```
 sudo apt-get install dotnet-dev-1.0.1
 ```
-******
 ## Some other useful linux tricks
 
 finding out our linux version

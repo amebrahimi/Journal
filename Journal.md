@@ -32,7 +32,7 @@
     * [How to check for open port](#how-to-check-for-open-port)
     * [How to check the cpu usage](#how-to-check-the-cpu-usage)
     * [How to mount drives](#how-to-mount-drives)
-    * [How to set SSH Passwordless Login Using SSH Keygen](#how-to-set-ssh-passwordless-login-using-ssh-keygen]
+    * [How to set SSH Passwordless Login Using SSH Keygen](#how-to-set-ssh-passwordless-login-using-ssh-keygen)
 * [Installing dotnetcore on Linux (Ubuntu)](#installing-dotnetcore-on-linux)
   * [Add the dotnet apt-get feed](#add-the-dotnet-apt-get-feed)
   * [Install .NET Core SDK](#install-.netcore-sdk)

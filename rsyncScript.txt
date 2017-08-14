@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#Backup Databases to my server
+server=root@london.mrclover.tk
+
+rsync -avz /home/prince/db_backup_sync $server:/root/backup-server/db/
+rsync -avz /var/www/ $server:/root/backup-server/we-sites/

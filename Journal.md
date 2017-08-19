@@ -758,7 +758,7 @@ $ xclip -sel clip < ~/.ssh/id_rsa.pub
 8. if prompted, confirm your GitHub password.
 
 ### Permalinks fix
-We were migrating a wordpress site and when we set up every thing, the permalinks on postname was not working when we clicked on a link we got error 404 and after searching among variety of things that it did not fixed the promlem finally adnan hit the solution; the solution was in the file httpd.conf the property `AllowOverride` must have been on `all` not `none`. because word press writes some properties in `.htaccess` and if we want `.htaccess` to work, `AllowOverride` must be on `all`. now the problem is solved 
+We were migrating a wordpress site and when we set up every thing, the permalinks on postname was not working when we clicked on a link we got error 404 and after searching among variety of things that it did not fixed the problem finally adnan hit the solution; the solution was in the file `httpd.conf` the property `AllowOverride` must have been on `all` not `none`. because word press writes some properties in `.htaccess` and if we want `.htaccess` to work, `AllowOverride` must be on `all`. now the problem is solved 
 
 ******
 

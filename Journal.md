@@ -43,6 +43,7 @@
   * [Set up the virtual host](#setup-virtual-host)
   * [Configure your virtual host directories](#configure-your-virtual-host-directories)
   * [Ready up site for laravel](#ready-up-site-for-laravel)
+  * [Permalinks fix](#permalinks-fix)
 * [<strong>Config a computer for using ssh pull/push git</strong>](#Config-a-computer-for-using-ssh-pull-/-push-git)
   * [Checking for existing SSh Keys](#checking-for-existing-ssh-keys)
   * [Generating a new SSH key](#generating-a-new-ssh-key)
@@ -755,6 +756,9 @@ $ xclip -sel clip < ~/.ssh/id_rsa.pub
 6. Paste your key into the "key" field.</br>
 7. Click **Add SSH key**.</br>
 8. if prompted, confirm your GitHub password.
+
+### Permalinks fix
+We were migrating a wordpress site and when we set up every thing, the permalinks on postname was not working when we clicked on a link we got error 404 and after searching among variety of things that it did not fixed the promlem finally adnan hit the solution; the solution was in the file httpd.conf the property `AllowOverride` must been `all` not `none`. because word press writes some properties in `.htaccess` and if we want `.htaccess` to work, `AllowOverride` must be `all`. now the problem solved 
 
 ******
 

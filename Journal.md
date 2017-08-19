@@ -718,6 +718,9 @@ If you want to ready your site which is using laravel type the following command
 ```
 $ composer install
 ```
+### Permalinks fix
+We were migrating a wordpress site and when we set up every thing, the permalinks on postname was not working when we clicked on a link we got error 404 and after searching among variety of things that it did not fixed the problem finally adnan hit the solution; the solution was in the file `httpd.conf` the property `AllowOverride` must have been on `all` not `none`. because word press writes some properties in `.htaccess` and if we want `.htaccess` to work, `AllowOverride` must be on `all`. now the problem is solved 
+
 ******
 ## Config a computer for using ssh pull/push git
 ### Checking for existing SSh Keys
@@ -756,9 +759,6 @@ $ xclip -sel clip < ~/.ssh/id_rsa.pub
 6. Paste your key into the "key" field.</br>
 7. Click **Add SSH key**.</br>
 8. if prompted, confirm your GitHub password.
-
-### Permalinks fix
-We were migrating a wordpress site and when we set up every thing, the permalinks on postname was not working when we clicked on a link we got error 404 and after searching among variety of things that it did not fixed the problem finally adnan hit the solution; the solution was in the file `httpd.conf` the property `AllowOverride` must have been on `all` not `none`. because word press writes some properties in `.htaccess` and if we want `.htaccess` to work, `AllowOverride` must be on `all`. now the problem is solved 
 
 ******
 

@@ -1,3 +1,4 @@
+#!/bin/bash
 #Copy the latest Mallowin backup to my folder
 /bin/cp /home/hsharghi/db_backup/$(ls -1t /home/hsharghi/db_backup | head -1) /home/prince/db_backup/mallowin
 

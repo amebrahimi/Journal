@@ -1,11 +1,11 @@
 #Copy the latest Mallowin backup to my folder
-cp /home/hsharghi/db_backup/$(ls -1t /home/hsharghi/db_backup | head -1) /home/prince/db_backup/mallowin
+/bin/cp /home/hsharghi/db_backup/$(ls -1t /home/hsharghi/db_backup | head -1) /home/prince/db_backup/mallowin
 
 #Delete all files in db_backup_sync
-rm /home/prince/db_backup_sync/*
+/bin/rm /home/prince/db_backup_sync/*
 #Copy the latest db backups to the rsync folder
-cp /home/prince/db_backup/burger/$(ls -1t /home/prince/db_backup/burger | head -1) /home/prince/db_backup_sync
-cp /home/prince/db_backup/gz/$(ls -1t /home/prince/db_backup/gz | head -1) /home/prince/db_backup_sync
-cp /home/prince/db_backup/mallowin/$(ls -1t /home/prince/db_backup/mallowin | head -1) /home/prince/db_backup_sync
-cp /home/prince/db_backup/poem/$(ls -1t /home/prince/db_backup/poem | head -1) /home/prince/db_backup_sync
-cp /home/prince/db_backup/tutti/$(ls -1t /home/prince/db_backup/tutti | head -1) /home/prince/db_backup_sync
+/bin/cp /home/prince/db_backup/burger/$(ls -1t /home/prince/db_backup/burger | head -1) /home/prince/db_backup_sync
+/bin/cp /home/prince/db_backup/gz/$(ls -1t /home/prince/db_backup/gz | head -1) /home/prince/db_backup_sync
+/bin/cp /home/prince/db_backup/mallowin/$(ls -1t /home/prince/db_backup/mallowin | head -1) /home/prince/db_backup_sync
+/bin/cp /home/prince/db_backup/poem/$(ls -1t /home/prince/db_backup/poem | head -1) /home/prince/db_backup_sync
+/bin/cp /home/prince/db_backup/tutti/$(ls -1t /home/prince/db_backup/tutti | head -1) /home/prince/db_backup_sync

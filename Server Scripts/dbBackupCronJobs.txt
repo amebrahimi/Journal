@@ -1,11 +1,11 @@
-0 10  * * * mysqldump -u m_sadegh -p@Msadegh2016! poem | gzip -c -9 > /home/prince/db_backup/poem/poem.bk.`date +\%Y\%m\%d-\%H\%M\%S`.gz
-0 15  * * * mysqldump -u m_sadegh -p@Msadegh2016! poem | gzip -c -9 > /home/prince/db_backup/poem/poem.bk.`date +\%Y\%m\%d-\%H\%M\%S`.gz
+0 10  * * * mysqldump -u m_sadegh -p poem | gzip -c -9 > /home/prince/db_backup/poem/poem.bk.`date +\%Y\%m\%d-\%H\%M\%S`.gz
+0 15  * * * mysqldump -u m_sadegh -p poem | gzip -c -9 > /home/prince/db_backup/poem/poem.bk.`date +\%Y\%m\%d-\%H\%M\%S`.gz
 
-0 10  * * * mysqldump -u gz.user -pGandom.110 gz | gzip -c -9 > /home/prince/db_backup/gz/gz.bk.`date +\%Y\%m\%d-\%H\%M\%S`.gz
-0 15  * * * mysqldump -u gz.user -pGandom.110 gz | gzip -c -9 > /home/prince/db_backup/gz/gz.bk.`date +\%Y\%m\%d-\%H\%M\%S`.gz
+0 10  * * * mysqldump -u gz.user -p gz | gzip -c -9 > /home/prince/db_backup/gz/gz.bk.`date +\%Y\%m\%d-\%H\%M\%S`.gz
+0 15  * * * mysqldump -u gz.user -p gz | gzip -c -9 > /home/prince/db_backup/gz/gz.bk.`date +\%Y\%m\%d-\%H\%M\%S`.gz
 
-0 10  * * * mysqldump -u tutti.user -pTutti.110 tutti | gzip -c -9 > /home/prince/db_backup/tutti/tutti.bk.`date +\%Y\%m\%d-\%H\%M\%S`.gz
-0 15  * * * mysqldump -u tutti.user -pTutti.110 tutti | gzip -c -9 > /home/prince/db_backup/tutti/tutti.bk.`date +\%Y\%m\%d-\%H\%M\%S`.gz
+0 10  * * * mysqldump -u tutti.user -p tutti | gzip -c -9 > /home/prince/db_backup/tutti/tutti.bk.`date +\%Y\%m\%d-\%H\%M\%S`.gz
+0 15  * * * mysqldump -u tutti.user -p tutti | gzip -c -9 > /home/prince/db_backup/tutti/tutti.bk.`date +\%Y\%m\%d-\%H\%M\%S`.gz
 
-0 10  * * * mysqldump -u bh_user -p#!BurgerH@2017 burger | gzip -c -9 > /home/prince/db_backup/burger/burger.bk.`date +\%Y\%m\%d-\%H\%M\%S`.gz
-0 15  * * * mysqldump -u bh_user -p#!BurgerH@2017 burger | gzip -c -9 > /home/prince/db_backup/burger/burger.bk.`date +\%Y\%m\%d-\%H\%M\%S`.gz
+0 10  * * * mysqldump -u bh_user -p burger | gzip -c -9 > /home/prince/db_backup/burger/burger.bk.`date +\%Y\%m\%d-\%H\%M\%S`.gz
+0 15  * * * mysqldump -u bh_user -p burger | gzip -c -9 > /home/prince/db_backup/burger/burger.bk.`date +\%Y\%m\%d-\%H\%M\%S`.gz
